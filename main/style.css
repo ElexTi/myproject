@@ -2,23 +2,100 @@
     margin: 0;
     padding: 0;
 }
-#h-01 {
+#ic {
     color: #e7dcdc;
     padding: 80px;
     margin-left: 50px;
 }
+p{
+    color: #5c5959;
+}
+#p1:hover{
+    color: #9b9595;
+}
+a {
+    color: #5c5959;
+    text-decoration: none;
+}
+a:hover {
+    color: #9b9595;
+    text-decoration: underline; 
+   }
 #left-col {
     width: 24em;
     height: 1067px;
     background-image: linear-gradient(180deg, rgb(43, 36, 36), rgb(48, 43, 43) 40%, rgb(63, 55, 55));
+    border: 2px solid #b1b0af;
+    border-left-style: hidden;
+    border-top-style: hidden;
+    border-bottom-style: hidden;
 }
 @font-face {
 	font-family: 'Segoe UI';
-	src: url('SegoeUI.eot');
-	src: local('Segoe UI'), local('SegoeUI'),
+	src: url('../src/SegoeUI/SegoeUI.ttf');
+	src: local('../src/SegoeUI/SegoeUI.ttf'), local('../src/SegoeUI/SegoeUI.eot'),
 		url('SegoeUI.eot?#iefix') format('embedded-opentype'),
 		url('SegoeUI.woff') format('woff'),
 		url('SegoeUI.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
+}
+body::before {
+    content: '';
+    position: fixed;
+    left: 0; right: 0; 
+    top: 0; bottom: 0; 
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    background: url(../src/800x500.jpg) center / cover no-repeat;
+    filter: blur(14px);
+   }
+#icon {
+    height: 70px;
+    width: 70px;
+}
+#rght {
+    margin-left: -600px;
+    margin-top: -1000px;
+}
+* {box-sizing: border-box;}
+form {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+input {
+  width: 100%;
+  height: 42px;
+  padding-left: 10px;
+  border: 2px solid #b1b0af;
+  border-radius: 5px;
+  outline: none;
+  background: #4d4d4d;
+  color: #b1b0af;
+}
+button {
+  position: absolute; 
+  top: 0;
+  right: 0px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: #4d4d4d;
+  border: 2px solid #b1b0af;
+  border-left-style: hidden;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+button:before {
+content: '';
+    background-image: url(../src/lupa.png);
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    background-size: cover;
+    left: 2px;
+    top: 8px;
+    filter: hue-rotate(120deg);
 }
